@@ -1,6 +1,6 @@
 # Marketing Mix Model for a travel subscription: paid search vs paid social
 
-**How should an online travel agency split its paid budget to win the most new subscription members?**
+**How should a company split its paid budget to win the most new subscription members?**
 
 In this project I built a Marketing Mix Model (MMM) in R to answer that question for an online travel agency, which I'll call **Company X**. I took two years of weekly spend and sign-up data and turned them into a concrete budget recommendation.
 
