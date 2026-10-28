@@ -1,4 +1,4 @@
-# Marketing Mix Model for a travel subscription: paid search vs paid social
+# Marketing Mix Model: paid search vs paid social
 
 **How should a company split its paid budget to win the most new subscription members?**
 
