@@ -151,35 +151,13 @@ The gain is modest: +22 members a week, about +1,150 a year, worth about €140k
 
 1. **Shift about 8 percentage points of the paid budget from social to search** (about €8k a week). Every plausible model says search should get a bigger share.
 2. **Don't cut social to zero.** It's still profitable at the margin, and its effect lasts for weeks after each campaign. Judging it on same-week sign-ups would undervalue it.
-3. **Validate before scaling.** I'd run a geo holdout test: raise search and lower social in a few regions for 6–8 weeks and compare them with matched control regions. The result would then be used to calibrate the next model.
 4. **Value members at lifetime value, not first booking.** Measured on the margin of a single booking, both channels would look far less profitable than they really are.
 
 ## 6. Limitations and next steps
 
 - **Weakly identified saturation:** many curve shapes fit the data almost equally well, so the size of each channel's contribution is uncertain. That's why I report ranges, not single numbers, and why I'd calibrate the MMM with experiments before making large budget moves.
 - **Endogeneity:** search spend follows demand (it's higher in January). I control for seasonality, but the model could still over-credit search in peak weeks. A search holdout test would check this.
-- **Brand vs generic search:** brand searches ("Company X flights") come from people who are already looking for the company. With more granular data I would split them, because brand search usually has a much lower true incremental effect.
-- **One market, two channels:** a complete model would cover several countries with a hierarchical (multilevel) model, so that small markets can borrow strength from big ones.
 - **Lifetime value is an assumption** (€120). Ideally I'd estimate LTV per acquisition channel from cohorts, since members acquired through social might renew less than those from search.
-- **Next tools:** Meta's Robyn (R) or Google's Meridian for production use. Both support calibration with experiments.
 
-## How to run
 
-```r
-install.packages(c("ggplot2", "scales"))
-```
 
-```bash
-Rscript R/run_all.R
-```
-
-| Script | What it does |
-|---|---|
-| `R/00_functions.R` | Adstock, saturation and response-curve helpers |
-| `R/02_fit_model.R` | Grid search with hold-out validation, final model, decomposition |
-| `R/03_roi_and_budget.R` | ROI, marginal cost, budget scenarios, uncertainty ranges |
-| `R/04_charts.R` | Creates the charts in `output/figures/` |
-
----
-
-*The company name has been changed and the data slightly modified to protect confidentiality.*
