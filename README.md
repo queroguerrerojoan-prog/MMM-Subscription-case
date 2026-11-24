@@ -2,7 +2,7 @@
 
 **How should a company split its paid budget to win the most new subscription members?**
 
-In this project I built a Marketing Mix Model (MMM) in R to answer that question for an online travel agency, which I'll call **Company X**. I took two years of weekly spend and sign-up data and turned them into a concrete budget recommendation.
+In this project I built a Marketing Mix Model (MMM) in R to answer that question for a TV platform campaign. I took two years of weekly spend and sign-up data and turned them into a concrete budget recommendation.
 
 The data comes from a real case. To protect confidentiality, I changed the company name and adjusted the figures slightly, keeping the patterns and the conclusions intact.
 
